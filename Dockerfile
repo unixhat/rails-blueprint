@@ -1,4 +1,4 @@
-FROM heriyanto/rails-blueprint:migrate
+FROM heriyanto/rails-blueprint:base
 RUN mkdir /myapp
 WORKDIR /myapp
 COPY . /myapp
