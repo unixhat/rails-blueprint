@@ -8,8 +8,8 @@ pipeline {
         }
       }
       steps {
-        sh 'cp /Users/heriyanto/env/sleekr.env ${WORKSPACE}/.env'
-        sh 'cp /Users/heriyanto/env/sleekr.database.yml ${WORKSPACE}/config/database.yml'
+        sh 'cp /Users/heriyanto/env/migrate.sleekr.env ${WORKSPACE}/.env'
+        sh 'cp /Users/heriyanto/env/migrate.sleekr.database.yml ${WORKSPACE}/config/database.yml'
         sh 'docker build -t heriyanto/rails-blueprint:${BUILD_NUMBER} .'
         sh 'docker push heriyanto/rails-blueprint:${BUILD_NUMBER}'
       }
