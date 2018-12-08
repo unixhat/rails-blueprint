@@ -4,7 +4,7 @@ pipeline {
     stage('Deploy Staging') {
       when {
         expression {
-          BRANCH_NAME ==~ /(master|staging|develop|hotfix.*|release.*)/
+          BRANCH_NAME ==~ /(staging|develop|hotfix.*|release.*)/
         }
       }
       steps {
