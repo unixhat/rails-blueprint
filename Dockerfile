@@ -1,4 +1,8 @@
 FROM heriyanto/rails-blueprint:base
-WORKDIR /myapp
+
 COPY . /myapp
-RUN rails server
+COPY conf/supervisord.conf /etc/supervisord.conf
+ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.conf"]
+WORKDIR /myapp
+
+EXPOSE 80 443
