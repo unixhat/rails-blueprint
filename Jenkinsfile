@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Deploy Staging') {
+    stage('Migrating') {
       when {
         expression {
           BRANCH_NAME ==~ /(migrate|staging|develop|hotfix.*|release.*)/
