@@ -7,5 +7,5 @@ COPY Gemfile /myapp/Gemfile
 COPY Gemfile.lock /myapp/Gemfile.lock
 RUN gem install bundle && bundle install
 RUN rails db:setup && rails db:migrate
-RUN rails g rename:into coba
+#RUN rails g rename:into coba
 RUN rails server
