@@ -24,7 +24,7 @@ default: &default
 development:
   <<: *default
  # database: ENV['DATABASE_NAME']
-  database: coba2
+  database: rails_blueprint2
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
