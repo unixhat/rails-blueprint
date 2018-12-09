@@ -31,7 +31,7 @@ pipeline {
         sh 'cp /opt/env/sleekr.database.yml ${WORKSPACE}/config/database.yml'
         sh 'docker build -t heriyanto/rails-blueprint:${BUILD_NUMBER} .'
         sh 'docker push heriyanto/rails-blueprint:${BUILD_NUMBER}'
-        sh 'kubectl set image deployment/sleekr-blueprint heriyanto/rails-blueprint:${BUILD_NUMBER}'
+        sh 'kubectl set image deployment/sleekr-blueprint sleekr-blueprint=heriyanto/rails-blueprint:${BUILD_NUMBER}'
       }
     }
     stage('Clean') {
