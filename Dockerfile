@@ -10,4 +10,3 @@ ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.conf"]
 WORKDIR /myapp
 
 EXPOSE 80 443 3000
-
